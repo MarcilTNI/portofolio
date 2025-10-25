@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penghitung Uang | Marcel Ibrahim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html">
+            <button class="a-button">Kembali</button>
+        </a>
+        <div class="wadah">
+            <h1 style="font-size: 2.3em; font-weight: 800;  font-family: Arial, Helvetica, sans-serif; color: skyblue; margin-bottom: 100px; text-align: center;">Kalkulator Pelunasan Hutang</h1>
+            <div class="wrapper-input">
+                <div class="card">
+                    <label for="penghasilan">Bayar Per Bulan</label>
+                    <input type="number" id="penghasilan" placeholder="Nominal Bayar per Bulan">
+                </div>
+
+                <div class="card">
+                    <label for="cicilan">Jumlah Cicilan</label>
+                    <input type="number" id="cicilan" placeholder="Nominal Cicilan per Bulan">
+                </div>
+            </div>
+
+            <div class="wrapper-output">
+                <div class="card-output">
+                    <label>Hasil</label>
+                    <button id="cekHasil" class="btnCek">Cek</button>
+                    <p id="hasil">Isi input untuk mengetahui jangka waktu pelunasan</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

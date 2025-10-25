@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Keuangan Pribadi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="fade-in" id="welcomeText">Selamat Datang di Aplikasi Saya!</h1>
+    
+    <div class="container">
+        <a href="../index.html">
+            <button class="button">Kembali</button>
+        </a>
+        <h2>💰 Manajemen Keuangan Pribadi</h2>
+        <h3>Saldo: <span id="saldo">Rp 0</span></h3>
+        
+        <div class="form">
+            <input type="text" id="deskripsi" placeholder="Deskripsi transaksi">
+            <input type="number" id="jumlah" placeholder="Jumlah (Rp)" min="0">
+            <select id="tipe">
+                <option value="pemasukan">💵 Pemasukan</option>
+                <option value="pengeluaran">💸 Pengeluaran</option>
+            </select>
+            <button onclick="tambahTransaksi()">➕ Tambah Transaksi</button>
+        </div>
+
+        <h3>📋 Riwayat Transaksi</h3>
+        <ul id="transaksi-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
