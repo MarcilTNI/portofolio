@@ -344,7 +344,7 @@ li:hover::after {
     background: rgb(255, 0, 212);
     box-shadow: 0px 0px 33px rgba(255, 1, 213, 0.993);
     width: 5px;
-    height: 143px;
+    height: max-content;
 }
 
 .desk-section-bar::after {
