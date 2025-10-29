@@ -500,6 +500,7 @@
     background: rgba(255, 255, 255, 0.3);
     align-items: center;
     padding-top: 0;
+    border-radius: 1.7em;
 }
 
 .link-project p {
@@ -533,9 +534,21 @@
         margin: 20px auto;
         font-size: 1em;
     }
+    .project {
+        padding: 100px 15px 30px;
+        gap: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
     .card-project {
-        width: 45%;
+        width: 100%;
         min-width: 250px;
+        top: 100%;
     }
     .margin-desk-section {
         margin-left: 35px;
@@ -655,7 +668,7 @@
         width: 100%;
         min-width: unset;
         flex-shrink: 0;
-        top: 100%;
+        top: 96%;
     }
 
     .card-project:hover .deskripsi-project {
@@ -728,6 +741,7 @@
 
     .card-project {
         flex-shrink: 0;
+        top: 90%;
     }
 
     .deskripsi-project {
@@ -754,6 +768,9 @@
         height: 180px;
     }
 
+    .card-project {
+        top: 100%;
+    }
     .mode-btn {
         padding: 6px 10px;
         font-size: 0.7em;
