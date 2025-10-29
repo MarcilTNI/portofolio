@@ -1,4 +1,5 @@
-*,html,body {
+/* Reset dan Global */
+*, html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,8 +14,9 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-} 
+}
 
+/* Navbar */
 .navbar {
     position: absolute;
     top: 35px;
@@ -24,24 +26,23 @@
     height: 60px;
     display: flex;
     align-items: center;
-    padding-left: 35px;
-    padding-right: 35px;
+    padding: 0 35px;
     background: transparent;
     border-bottom-left-radius: 2em;
     border-bottom-right-radius: 2em;
     font-family: Arial, Helvetica, sans-serif;
-    transition: all .35s ease-out;
+    transition: all 0.35s ease-out;
 }
 
 .navbar:hover {
-    box-shadow: 0px 10px 5px rgba(255, 0, 212, .38);
+    box-shadow: 0px 10px 5px rgba(255, 0, 212, 0.38);
     border-bottom: 1px solid rgb(255, 0, 212);
 }
 
 .navbar .judul {
     margin-right: auto;
     cursor: pointer;
-    transition: all .35s ease-out;
+    transition: all 0.35s ease-out;
 }
 
 .navbar .judul:hover {
@@ -50,32 +51,33 @@
     text-shadow: 0px 0px 15px rgba(255, 0, 212, 0.724);
 }
 
-.navbar ul{
+.navbar ul {
     display: flex;
     list-style-type: none;
 }
 
-ul .nav {
+.navbar ul .nav {
     color: white;
     font-size: 1.2em;
     text-decoration: none;
-    margin: 10px;
+    margin: 0 10px;
     cursor: pointer;
-    transition: all .3s ease-out;
+    transition: all 0.3s ease-out;
 }
 
-li {
+.navbar li {
     position: relative;
-    transition: all .3s ease-out;
+    transition: all 0.3s ease-out;
 }
 
-li:hover, .nav:hover {
+.navbar li:hover,
+.navbar .nav:hover {
     color: rgba(255, 0, 212);
     text-shadow: 0px 0px 15px rgba(255, 0, 212, 0.724);
     transform: scale(1.2);
 }
 
-li::after {
+.navbar li::after {
     position: absolute;
     bottom: -5px;
     left: 0;
@@ -83,16 +85,17 @@ li::after {
     width: 0;
     height: 2px;
     border-radius: 5px;
-    background: linear-gradient(to right,rgb(255, 0, 212), rgb(2, 27, 255), rgb(192, 18, 255));
-    transition: all .3s ease-out;
+    background: linear-gradient(to right, rgb(255, 0, 212), rgb(2, 27, 255), rgb(192, 18, 255));
+    transition: all 0.3s ease-out;
 }
 
-li:hover::after {
-    box-shadow: 2px 5px 10px rgba(255, 0, 212, .5);
+.navbar li:hover::after {
+    box-shadow: 2px 5px 10px rgba(255, 0, 212, 0.5);
     width: 100%;
     color: rgba(255, 0, 212);
 }
 
+/* Content */
 .content {
     position: absolute;
     top: 170px;
@@ -100,8 +103,7 @@ li:hover::after {
     height: 450px;
     display: flex;
     align-items: center;
-    padding-right: 30px;
-    padding-left: 30px;
+    padding: 0 30px;
 }
 
 .card-image {
@@ -113,11 +115,12 @@ li:hover::after {
 }
 
 @keyframes imageMove {
-    0%,100% {
+    0%, 100% {
         transform: translateY(-5px);
-    } 50% {
+    }
+    50% {
         transform: translateY(5px);
-    } 
+    }
 }
 
 .card-image img {
@@ -128,7 +131,7 @@ li:hover::after {
     object-fit: cover;
     object-position: 100% 50%;
     z-index: 100;
-    transition: all .3s ease-out;
+    transition: all 0.3s ease-out;
     cursor: pointer;
 }
 
@@ -147,7 +150,7 @@ li:hover::after {
     width: 60%;
     height: 55%;
     color: black;
-    border-radius: 15px; 
+    border-radius: 15px;
     font-size: 1.1em;
     background: linear-gradient(45deg, #4a0e4e, #5c1a5c, #3d0a3d, #6b1e6b, #4f144f, #5a185a, #420d42, #4a0e4e);
     background-size: 400%;
@@ -157,16 +160,18 @@ li:hover::after {
         0 0 40px rgba(92, 26, 92, 0.4),
         0 0 60px rgba(61, 10, 61, 0.3),
         0 10px 35px rgba(0, 0, 0, 0.7);
-    transition: all .3s ease-out;
+    transition: all 0.3s ease-out;
     animation: gradientRotate 3s linear infinite;
 }
 
 @keyframes gradientRotate {
     0% {
         background-position: 0% 50%;
-    } 50% {
+    }
+    50% {
         background-position: 100% 50%;
-    } 100% {
+    }
+    100% {
         background-position: 0% 50%;
     }
 }
@@ -188,6 +193,7 @@ li:hover::after {
     transform: translateY(-5px) scale(1.01);
 }
 
+/* About */
 .about {
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
@@ -218,7 +224,7 @@ li:hover::after {
     padding: 12px 25px;
     border-radius: 2em;
     cursor: pointer;
-    transition: all .3s ease-out;
+    transition: all 0.3s ease-out;
 }
 
 .mode-btn:hover {
@@ -249,7 +255,7 @@ li:hover::after {
     width: max-content;
     margin-bottom: 40px;
     cursor: pointer;
-    transition: all .3s ease-out;
+    transition: all 0.3s ease-out;
 }
 
 .judul-section:hover {
@@ -277,16 +283,6 @@ li:hover::after {
     position: relative;
 }
 
-.img-skill::before {
-    content: '';
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    left: -20px;
-    top: 0;
-    background: rgb(255, 0, 212);
-}
-
 .margin-desk-section {
     margin-left: 45px;
 }
@@ -305,12 +301,12 @@ li:hover::after {
     width: 0;
     height: 2px;
     border-radius: 5px;
-    background: linear-gradient(to right,rgb(255, 0, 212), rgb(2, 27, 255), rgb(192, 18, 255));
-    transition: all .3s ease-out;
+    background: linear-gradient(to right, rgb(255, 0, 212), rgb(2, 27, 255), rgb(192, 18, 255));
+    transition: all 0.3s ease-out;
 }
 
 .underline:hover {
-    text-shadow: 2px 5px 10px rgba(255, 0, 212, .5);
+    text-shadow: 2px 5px 10px rgba(255, 0, 212, 0.5);
 }
 
 .underline:hover::after {
@@ -331,7 +327,8 @@ li:hover::after {
 @keyframes melar {
     0%, 100% {
         height: 30px;
-    } 50% {
+    }
+    50% {
         height: 45px;
     }
 }
@@ -373,6 +370,7 @@ li:hover::after {
     }
 }
 
+/* Project */
 .project {
     width: 100%;
     height: 80vh;
@@ -390,9 +388,10 @@ li:hover::after {
 }
 
 @keyframes shadowInset {
-    0%,100% {
+    0%, 100% {
         box-shadow: inset 15px 0px 25px rgba(255, 0, 212, 0.327);
-    } 50% {
+    }
+    50% {
         box-shadow: inset 0px 15px 25px rgba(255, 0, 212, 0.327);
     }
 }
@@ -415,10 +414,10 @@ li:hover::after {
     color: white;
     font-weight: bold;
     opacity: 0;
-    transition: all .3s ease-out;
+    transition: all 0.3s ease-out;
 }
 
-.hero-project:hover .pop-up-judul{
+.hero-project:hover .pop-up-judul {
     top: 100%;
     opacity: 1;
 }
@@ -427,7 +426,7 @@ li:hover::after {
     font-family: Arial, Helvetica, sans-serif;
     cursor: pointer;
     color: white;
-    transition: all .35s ease-out;
+    transition: all 0.35s ease-out;
 }
 
 .project-judul:hover {
@@ -464,7 +463,7 @@ li:hover::after {
     padding: 10px 30px;
     text-align: center;
     color: white;
-    overflow: auto; 
+    overflow: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
     background: linear-gradient(135deg, rgba(44, 2, 26, 0.9), rgba(61, 10, 61, 0.9));
@@ -513,41 +512,37 @@ li:hover::after {
 }
 
 
+/* Media Queries */
 @media screen and (max-width: 1024px) {
     .navbar {
         width: 90%;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding: 0 20px;
     }
-
     .content {
         width: 90%;
         top: 150px;
         justify-content: center;
     }
-
     .card-image {
         width: 280px;
         height: 280px;
         margin: 0 auto;
     }
-
     .card-deskripsi {
         width: 90%;
         margin: 20px auto;
         font-size: 1em;
     }
-
     .card-project {
         width: 45%;
         min-width: 250px;
     }
-
     .margin-desk-section {
         margin-left: 35px;
     }
 }
 
+/* Media Queries */
 @media screen and (max-width: 767px) {
     .navbar {
         width: 95%;
@@ -569,7 +564,7 @@ li:hover::after {
         gap: 5px;
     }
 
-    ul .nav {
+    .navbar ul .nav {
         font-size: 1em;
         margin: 5px;
     }
@@ -590,7 +585,7 @@ li:hover::after {
     .card-deskripsi {
         width: 100%;
         min-width: unset;
-        font-size: .95em;
+        font-size: 0.95em;
     }
 
     .content-desk {
@@ -609,7 +604,7 @@ li:hover::after {
 
     .mode-btn {
         padding: 10px 15px;
-        font-size: .8em;
+        font-size: 0.8em;
         height: auto;
     }
 
@@ -624,7 +619,7 @@ li:hover::after {
 
     .margin-desk-section {
         margin-left: 25px;
-        font-size: .95em;
+        font-size: 0.95em;
     }
 
     .desk-section::before,
@@ -639,6 +634,13 @@ li:hover::after {
     .project {
         padding: 100px 15px 30px;
         gap: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
     }
 
     .hero-project {
@@ -652,6 +654,8 @@ li:hover::after {
     .card-project {
         width: 100%;
         min-width: unset;
+        flex-shrink: 0;
+        top: 100%;
     }
 
     .card-project:hover .deskripsi-project {
@@ -664,8 +668,8 @@ li:hover::after {
         font-size: 1.1em;
     }
 
-    ul .nav {
-        font-size: .9em;
+    .navbar ul .nav {
+        font-size: 0.9em;
     }
 
     .card-image {
@@ -674,7 +678,7 @@ li:hover::after {
     }
 
     .card-deskripsi {
-        font-size: .85em;
+        font-size: 0.85em;
     }
 
     .content-desk {
@@ -683,7 +687,7 @@ li:hover::after {
 
     .mode-btn {
         padding: 8px 12px;
-        font-size: .75em;
+        font-size: 0.75em;
     }
 
     .judul-section {
@@ -692,7 +696,7 @@ li:hover::after {
 
     .margin-desk-section {
         margin-left: 20px;
-        font-size: .9em;
+        font-size: 0.9em;
     }
 
     .subjudul-skill-section {
@@ -708,17 +712,26 @@ li:hover::after {
         height: 25px;
     }
 
+    .project {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
     .project-judul {
         font-size: 1.1em;
     }
 
-    .judul-project {
-        height: 80px;
-        font-size: .85em;
+    .card-project {
+        flex-shrink: 0;
     }
 
     .deskripsi-project {
-        font-size: .85em
+        font-size: 0.85em;
     }
 }
 
@@ -731,8 +744,8 @@ li:hover::after {
         font-size: 1em;
     }
 
-    ul .nav {
-        font-size: .8em;
+    .navbar ul .nav {
+        font-size: 0.8em;
         margin: 3px;
     }
 
@@ -743,11 +756,11 @@ li:hover::after {
 
     .mode-btn {
         padding: 6px 10px;
-        font-size: .7em;
+        font-size: 0.7em;
     }
 
     .margin-desk-section {
         margin-left: 15px;
-        font-size: .85em;
+        font-size: 0.85em;
     }
 }
