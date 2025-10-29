@@ -438,61 +438,80 @@ li:hover::after {
 
 .card-project {
     width: 25%;
+    height: 400px;
     background: transparent;
-    backdrop-filter: blur(20px);
     border: 1px solid white;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     border-radius: 2em;
     text-decoration: none;
+    flex-shrink: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    transition: all 0.3s ease-out;
+    top: 50px;
 }
 
 .card-project:hover {
     box-shadow: 0px 0px 33px rgba(255, 0, 212, 0.318);
     border: 2px solid white;
-    transform: translateY(4px);
-}
-
-
-.judul-project {
-    background: rgb(33, 14, 25);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    height: 100px;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 400;
-    font-size: .9em;
-    border-radius: 2em;
-    padding: 10px;
 }
 
 .deskripsi-project {
-    max-height: 0;
-    opacity: 0;
+    height: 80%;
     width: 100%;
-    overflow: hidden;
-    transition: all .3s ease-out;
-    line-height: 1.5;
+    padding: 10px 30px;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 5px;
-    font-size: .9em;
-    backdrop-filter: blur(20px);
+    color: white;
+    overflow: auto; 
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    background: linear-gradient(135deg, rgba(44, 2, 26, 0.9), rgba(61, 10, 61, 0.9));
+    position: relative;
+    z-index: 1;
 }
 
-.card-project:hover .deskripsi-project {
-    max-height: 220px;
-    opacity: 1;
-    color: white;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 15px;    
+.deskripsi-project::-webkit-scrollbar {
+    display: none;
 }
+
+.link-project {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 20%;
+    width: 100%;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(0px);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    font-size: 1.2em;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 2;
+}
+
+.card-project:hover .link-project {
+    height: 100%;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.3);
+    align-items: center;
+    padding-top: 0;
+}
+
+.link-project p {
+    transition: all 0.3s ease;
+}
+
+.card-project:hover .link-project p {
+    font-size: 1.4em;
+    text-shadow: 0px 0px 10px rgba(255, 0, 212, 0.5);
+}
+
 
 @media screen and (max-width: 1024px) {
     .navbar {
